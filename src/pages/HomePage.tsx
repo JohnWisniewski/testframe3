@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { FaArrowRight, FaMoon, FaSun } from 'react-icons/fa';
-import './homep.css';
+import '../homep';
 // import axios from 'axios';
 
 // Importing Speech Recognition
