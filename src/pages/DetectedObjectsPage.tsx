@@ -199,7 +199,7 @@ const stopLoopManually = () => {
                         <strong>{obj.name}</strong> - Confidence: {Math.round(obj.score * 100)}%
                       </Typography>
                       <Typography variant="body2" color="textSecondary">
-                        Movement Direction: {direction}
+                        Movement Direction: {movementDirection}
                       </Typography>
                     </ListItem>
                   );
@@ -211,7 +211,7 @@ const stopLoopManually = () => {
   
         <Box my={4}>
           <Typography variant="h5">Movement Direction:</Typography>
-          <Typography variant="body1">{movementDirection || 'Object is centered'}</Typography>
+          <Typography variant="body1">{movementDirection}</Typography>
         </Box>
       </Container>
     );
