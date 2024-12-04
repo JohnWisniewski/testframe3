@@ -191,8 +191,8 @@ const stopLoopManually = () => {
                     imageWidth,
                     imageHeight
                   );
-                  //const direction = getMovementDirection(objectCenter, imageCenter);
-  
+                  const direction = getMovementDirection(objectCenter, imageCenter);
+                  direction = null;
                   return (
                     <ListItem key={index} sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
                       <Typography variant="body1">
@@ -201,7 +201,7 @@ const stopLoopManually = () => {
                       <Typography variant="body2" color="textSecondary">
                         Movement Direction: {movementDirection}
                       </Typography>
-                    </ListItem>
+                      </ListItem>
                   );
                 })}
               </List>
