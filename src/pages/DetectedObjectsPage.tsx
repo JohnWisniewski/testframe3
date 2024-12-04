@@ -191,7 +191,7 @@ const stopLoopManually = () => {
                     imageWidth,
                     imageHeight
                   );
-                  const direction = getMovementDirection(objectCenter, imageCenter);
+                  //const direction = getMovementDirection(objectCenter, imageCenter);
   
                   return (
                     <ListItem key={index} sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
