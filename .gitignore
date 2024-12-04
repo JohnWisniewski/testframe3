@@ -9,7 +9,7 @@ logs/
 # Dependency directories
 node_modules/
 jspm_packages/
-
+node_modules/.cache/
 # Cache directories and files
 .npm/
 .cache/
