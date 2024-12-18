@@ -1,5 +1,5 @@
 // Speech.tsx
-
+import { isFeatureEnabled } from './utils/featureFlags';
 import React, { useState, useEffect } from 'react';
 declare global {
     interface Window {
@@ -12,10 +12,13 @@ interface SpeechToTextProps {
 }
 
 const SpeechToText: React.FC<SpeechToTextProps> = ({ handleTranscript }) => {
-  const [transcript, setTranscript] = useState<string>('');  // Store speech-to-text result
 
+  const [transcript, setTranscript] = useState<string>('');  // Store speech-to-text result
+  const isSpeechRecognitionEnabled = isFeatureEnabled('enableSpeechRecognition');
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   let recognition: any;
+
+
 
   if (SpeechRecognition) {
     recognition = new SpeechRecognition();
@@ -40,6 +43,7 @@ const SpeechToText: React.FC<SpeechToTextProps> = ({ handleTranscript }) => {
 
   // Capture the speech and convert it to text
   useEffect(() => {
+    if (!isSpeechRecognitionEnabled) return;
     if (!recognition) return;
 
     recognition.onresult = (event: any) => {
@@ -53,7 +57,7 @@ const SpeechToText: React.FC<SpeechToTextProps> = ({ handleTranscript }) => {
     recognition.onerror = (event: any) => {
       console.error('Speech recognition error:', event.error);
     };
-  }, [recognition, handleTranscript]);
+  }, [recognition, isSpeechRecognitionEnabled, handleTranscript,]);
 
   return (
     <div>
