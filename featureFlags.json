@@ -1,0 +1,7 @@
+{
+    "enableSpeechRecognition": true,
+    "enableObjectDetection": true,
+    "enableDarkModeToggle": true,
+    "enableVoiceNavigation": true
+  }
+  

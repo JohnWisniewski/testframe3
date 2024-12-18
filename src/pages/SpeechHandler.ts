@@ -1,4 +1,4 @@
-// src/utils/SpeechHandler.ts
+// src/pages/SpeechHandler.ts
 declare global {
     interface Window {
       SpeechRecognition: any;
