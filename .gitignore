@@ -1,0 +1,43 @@
+# Logs
+logs/
+*.log
+
+# Runtime data
+*.pid
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+node_modules/.cache/
+# Cache directories and files
+.npm/
+.cache/
+.eslintcache
+*.tsbuildinfo
+
+# Environment files (keep these private)
+.env
+
+# Build and distribution directories
+build/
+dist/
+
+# Test coverage output
+coverage/
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Editor and IDE settings
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.tmp
+*.swp
